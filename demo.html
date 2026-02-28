@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri Demo Website – semetonweb</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'] },
+                    colors: { brand: { 50: '#f0fdf4', 500: '#22c55e', 600: '#16a34a' } }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #f8fafc; color: #334155; }
+        .glass-nav { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(12px); border-bottom: 1px solid #e2e8f0; }
+        .card-demo { transition: all 0.3s ease; }
+        .card-demo:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); border-color: #22c55e; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 py-4 glass-nav">
+        <div class="container mx-auto px-4 md:px-8 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="images/lombokpartnerdigital.png" alt="Logo semetonweb" class="w-10 h-10 object-contain">
+                <span class="font-bold text-xl text-slate-900 lowercase">semeton<span class="text-brand-600">web</span></span>
+            </a>
+            <a href="index.html" class="font-bold text-sm text-slate-600 hover:text-brand-600 flex items-center gap-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                Kembali ke Beranda
+            </a>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="pt-32 pb-16 bg-slate-900 text-white text-center px-4">
+        <div class="container mx-auto max-w-3xl">
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Galeri Demo Interaktif</h1>
+            <p class="text-slate-300 text-lg">Klik tombol demo untuk merasakan langsung pengalaman antarmuka (UI/UX) website racikan kami dari sisi pengunjung.</p>
+        </div>
+    </section>
+
+    <!-- Demos Grid -->
+    <section class="py-16 px-4">
+        <div class="container mx-auto max-w-6xl">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="demo-container">
+                <!-- Injected via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 text-center px-4 bg-brand-50 border-t border-brand-100">
+        <h2 class="text-2xl font-bold mb-4 text-slate-900">Sudah Menemukan Referensi yang Cocok?</h2>
+        <a href="https://wa.me/6285956684081" class="inline-block px-8 py-4 rounded-xl bg-brand-600 text-white font-bold hover:bg-brand-500 transition-colors shadow-lg">Konsultasikan Ide Anda Sekarang</a>
+    </section>
+
+    <script>
+        const demos = [
+            { title: "Trekking Gunung Rinjani", img: "images/slide/BGDESKTOP-RINJANI.JPG", tag: "Pariwisata", url: "https://ahmadci4.github.io/contoh-webtrekking/" },
+            { title: "Transportasi & Travel", img: "images/slide/BGDESKTOP-GRAB.JPG", tag: "Pariwisata", url: "https://ahmadci4.github.io/lombokgrab/" },
+            { title: "Sewa Mobil & Motor", img: "images/slide/BGDESKTOP-GRAB.JPG", tag: "Rental", url: "https://ahmadci4.github.io/demo-web-sewa-mobil/" },
+            { title: "Toko Online Baju", img: "images/slide/toko-online-desktop.JPG", tag: "E-Commerce", url: "https://ahmadci4.github.io/demo-web-toko-online/" },
+            { title: "Company Profile PT/CV", img: "images/companyprofile.png", tag: "Corporate", url: "https://ahmadci4.github.io/demo-web-company-profile/" },
+            { title: "Sistem Reservasi", img: "images/booking.png", tag: "Booking", url: "https://ahmadci4.github.io/demo-web-reservasi/" },
+            { title: "Web Sekolah / Kampus", img: "images/administration.png", tag: "Instansi", url: "https://ahmadci4.github.io/demo-web-sekolah/" },
+            { title: "Portal Desa Digital", img: "images/local-administration-dashboard.png", tag: "Instansi", url: "https://ahmadci4.github.io/demo-web-profil-desa/" },
+            { title: "Portal Media Berita", img: "images/ui-ux.png", tag: "Media", url: "https://ahmadci4.github.io/demo-web-berita/" }
+        ];
+
+        const container = document.getElementById('demo-container');
+        demos.forEach(d => {
+            container.insertAdjacentHTML('beforeend', `
+                <div class="bg-white rounded-2xl overflow-hidden border-2 border-slate-100 card-demo flex flex-col">
+                    <div class="h-48 overflow-hidden bg-slate-200 relative border-b border-slate-100">
+                        <img src="${d.img}" class="w-full h-full object-cover object-top opacity-90 hover:opacity-100 transition-opacity" alt="${d.title}">
+                        <div class="absolute top-3 right-3 bg-slate-900/80 backdrop-blur text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">${d.tag}</div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="font-bold text-xl text-slate-900 mb-4">${d.title}</h3>
+                        <div class="mt-auto space-y-3">
+                            <a href="${d.url}" target="_blank" class="block w-full py-3 text-center rounded-xl bg-blue-50 text-blue-600 font-bold hover:bg-blue-100 transition-colors flex items-center justify-center gap-2">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                Buka Link Demo
+                            </a>
+                            <a href="https://wa.me/6285956684081?text=Halo%20semetonweb,%20saya%20tertarik%20pesan%20website%20seperti%20demo%20${encodeURIComponent(d.title)}" class="block w-full py-3 text-center rounded-xl border border-slate-200 text-slate-600 font-bold hover:bg-slate-50 transition-colors">
+                                Pesan Seperti Ini
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `);
+        });
+    </script>
+</body>
+</html>

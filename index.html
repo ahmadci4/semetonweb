@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jasa Pembuatan Website Trekking Gunung Rinjani – semetonweb</title>
+    <meta name="description" content="Spesialis pembuatan website agen trekking Gunung Rinjani dengan sistem booking otomatis, SEO, dan desain premium untuk wisatawan internasional.">
+    <meta name="keywords" content="Website Trekking Rinjani, Jasa Website Rinjani, Web Trekking Sembalun, semetonweb">
+    <meta name="author" content="semetonweb">
+    
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            200: '#bbf7d0',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            900: '#14532d',
+                        },
+                        accent: {
+                            500: '#f59e0b',
+                            600: '#d97706',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            background-color: #ffffff;
+            color: #334155;
+            overflow-x: hidden;
+        }
+
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .mockup-laptop {
+            border-radius: 8px 8px 0 0;
+            border: 2px solid #cbd5e1;
+            border-bottom: none;
+            position: relative;
+            background: #fff;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .mockup-laptop:after {
+            content: '';
+            display: block;
+            background: #94a3b8;
+            height: 12px;
+            border-radius: 0 0 10px 10px;
+            width: 120%;
+            position: absolute;
+            bottom: -14px;
+            left: -10%;
+        }
+        .mockup-mobile {
+            border-radius: 20px;
+            border: 4px solid #334155;
+            position: relative;
+            background: #fff;
+            overflow: hidden;
+        }
+        .mockup-mobile:before {
+            content: '';
+            display: block;
+            background: #334155;
+            height: 15px;
+            width: 40%;
+            position: absolute;
+            top: 0;
+            left: 30%;
+            border-radius: 0 0 8px 8px;
+            z-index: 10;
+        }
+        
+        .feature-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        /* Order Modal Animation */
+        #order-modal, #service-modal { transition: opacity 0.3s ease-in-out; }
+    </style>
+</head>
+<body class="antialiased selection:bg-brand-100 selection:text-brand-900">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 glass-nav">
+        <div class="container mx-auto px-4 md:px-8 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#beranda" class="flex items-center gap-3 select-none group">
+                <img src="images/lombokpartnerdigital.png" alt="Logo semetonweb" class="w-10 h-10 object-contain transition-transform group-hover:scale-105">
+                <div class="flex flex-col">
+                    <span class="font-bold text-xl leading-tight text-slate-900 tracking-tight lowercase">semeton<span class="text-brand-600">web</span></span>
+                </div>
+            </a>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex gap-8 items-center font-medium text-sm text-slate-700">
+                <a href="#solusi" class="hover:text-brand-600 transition-colors">Fitur Rinjani</a>
+                <a href="#layanan-lain" class="hover:text-brand-600 transition-colors">Layanan Digital</a>
+                <a href="#paket" class="hover:text-brand-600 transition-colors">Harga Web</a>
+                <!-- Link ke Halaman Demo -->
+                <a href="demo.html" class="flex items-center gap-1 text-brand-600 font-bold hover:text-brand-700 transition-colors">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                    Galeri Demo
+                </a>
+                <a href="https://wa.me/6285956684081?text=Halo%20semetonweb,%20saya%20mau%20konsultasi%20pembuatan%20website" target="_blank" class="px-6 py-2.5 rounded-full bg-brand-600 text-white hover:bg-brand-500 shadow-lg shadow-brand-500/30 transition-all active:scale-95 font-bold">
+                    Konsultasi Gratis
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="menu-btn" class="md:hidden text-slate-800 p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="6" x2="20" y2="6"></line><line x1="4" y1="12" x2="20" y2="12"></line><line x1="4" y1="18" x2="20" y2="18"></line></svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-white border-t border-slate-100 shadow-xl flex flex-col p-4 gap-2 font-medium">
+            <a href="#solusi" class="mobile-link block px-4 py-3 rounded-lg hover:bg-slate-50 text-slate-700">Fitur Rinjani</a>
+            <a href="#layanan-lain" class="mobile-link block px-4 py-3 rounded-lg hover:bg-slate-50 text-slate-700">Layanan Digital</a>
+            <a href="#paket" class="mobile-link block px-4 py-3 rounded-lg hover:bg-slate-50 text-slate-700">Harga Web</a>
+            <a href="demo.html" class="mobile-link block px-4 py-3 rounded-lg bg-brand-50 text-brand-700 font-bold">🎯 Lihat Galeri Demo</a>
+            <a href="https://wa.me/6285956684081" class="mobile-link block px-4 py-3 mt-2 rounded-lg bg-brand-600 text-white text-center font-bold">Chat WhatsApp</a>
+        </div>
+    </nav>
+
+    <!-- 🏔 HERO SECTION -->
+    <section id="beranda" class="pt-32 pb-16 md:pt-44 md:pb-24 px-4 bg-slate-50 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-brand-50 -z-10 rounded-bl-[120px] hidden md:block opacity-60"></div>
+        
+        <div class="container mx-auto px-4 md:px-8 flex flex-col md:flex-row items-center gap-12 md:gap-16">
+            
+            <div class="flex-1 text-center md:text-left z-10">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-slate-200 shadow-sm mb-6">
+                    <span class="w-2 h-2 rounded-full bg-accent-500 animate-pulse"></span>
+                    <span class="text-xs font-bold text-slate-700 tracking-wide uppercase">Spesialis Jasa Website Rinjani</span>
+                </div>
+                
+                <h1 class="text-4xl md:text-5xl lg:text-[3.4rem] font-extrabold text-slate-900 leading-[1.15] mb-6 tracking-tight">
+                    Jasa Pembuatan Website Agen <span class="text-brand-600">Trekking Gunung Rinjani</span> Profesional
+                </h1>
+                
+                <p class="text-lg md:text-xl text-slate-600 max-w-xl mx-auto md:mx-0 mb-8 leading-relaxed">
+                    Kami membantu agen trekking di <b>Sembalun & Senaru</b> membangun website premium dengan sistem booking otomatis untuk meningkatkan kepercayaan wisatawan internasional.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start items-center">
+                    <button onclick="openOrderModal('Web Trekking Rinjani', 2500000)" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-brand-600 text-white font-bold hover:bg-brand-500 transition-all shadow-xl shadow-brand-500/20 flex items-center justify-center gap-2">
+                        Pesan Otomatis Sekarang
+                    </button>
+                    <a href="https://ahmadci4.github.io/contoh-webtrekking/" target="_blank" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-white text-slate-800 border border-slate-200 font-bold hover:bg-slate-50 transition-all flex items-center justify-center gap-2">
+                        Lihat Demo Web Trekking
+                    </a>
+                </div>
+            </div>
+
+            <!-- Visual Mockup -->
+            <div class="w-full md:flex-1 relative z-10 hidden md:block">
+                <div class="relative mx-auto w-full max-w-[500px]">
+                    <div class="mockup-laptop w-full aspect-[16/10] bg-slate-800 relative z-10">
+                        <img src="images/slide/BGDESKTOP-RINJANI.JPG" class="w-full h-full object-cover object-top opacity-90" alt="Website Trekking Rinjani">
+                    </div>
+                    <div class="absolute -bottom-10 -left-8 w-[140px] h-[280px] border-4 border-slate-800 rounded-3xl bg-white overflow-hidden shadow-2xl z-20">
+                        <div class="absolute top-0 inset-x-0 h-4 bg-slate-800 rounded-b-lg w-1/2 mx-auto z-30"></div>
+                        <img src="images/slide/BGMOBILE-RINJANI.JPG" class="w-full h-full object-cover object-top" alt="Web Trekking Sembalun">
+                    </div>
+                    
+                    <div class="absolute top-10 -right-8 bg-white p-4 rounded-2xl shadow-xl border border-slate-100 z-30 animate-bounce" style="animation-duration: 4s;">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-green-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
+                            </div>
+                            <div>
+                                <p class="text-[10px] text-slate-500 font-bold uppercase tracking-wide">SEO Optimized</p>
+                                <p class="text-sm font-extrabold text-slate-900">Ranking Google</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 😩 SECTION MASALAH -->
+    <section id="masalah" class="py-20 bg-white">
+        <div class="container mx-auto px-4 md:px-8 max-w-5xl">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4 leading-tight">Tanpa Website Profesional, <br class="hidden md:block"/> Agen Trekking Sulit Berkembang</h2>
+                <div class="w-20 h-1.5 bg-red-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center gap-12 bg-slate-50 rounded-3xl p-8 md:p-12 border border-slate-100">
+                <div class="flex-1 space-y-5">
+                    <div class="flex items-start gap-4">
+                        <div class="mt-1 bg-red-100 p-1 rounded-full text-red-600 shrink-0"><svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M6 18L18 6M6 6l12 12"></path></svg></div>
+                        <p class="text-slate-700 font-medium text-lg">Booking hanya mengandalkan WhatsApp, terlihat kurang meyakinkan di mata Bule/Turis asing.</p>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="mt-1 bg-red-100 p-1 rounded-full text-red-600 shrink-0"><svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M6 18L18 6M6 6l12 12"></path></svg></div>
+                        <p class="text-slate-700 font-medium text-lg">Tidak punya sistem jadwal & harga yang jelas, membuat calon pendaki banyak tanya tapi jarang closing.</p>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="mt-1 bg-red-100 p-1 rounded-full text-red-600 shrink-0"><svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M6 18L18 6M6 6l12 12"></path></svg></div>
+                        <p class="text-slate-700 font-medium text-lg">Nama agen Anda tidak muncul di Google saat turis mencari "Rinjani Trekking Package".</p>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="mt-1 bg-red-100 p-1 rounded-full text-red-600 shrink-0"><svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M6 18L18 6M6 6l12 12"></path></svg></div>
+                        <p class="text-slate-700 font-medium text-lg">Sulit bersaing dengan agen besar yang sudah punya sistem website canggih.</p>
+                    </div>
+                </div>
+                <div class="md:w-1/3 text-center md:text-left bg-white p-6 rounded-2xl shadow-lg border border-slate-100">
+                    <p class="text-2xl font-bold text-slate-900 leading-snug mb-4">"Di era digital, kepercayaan (Trust) calon pendaki dimulai dari melihat kualitas Website Anda."</p>
+                    <p class="text-brand-600 font-bold uppercase tracking-wider text-sm">— semetonweb</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 💡 SECTION SOLUSI KHUSUS TREKKING -->
+    <section id="solusi" class="py-24 bg-slate-900 text-white relative">
+        <div class="absolute inset-0 bg-[url('images/bgrinjani.png')] bg-cover bg-center opacity-10 mix-blend-overlay"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/95 to-slate-900/80"></div>
+
+        <div class="container mx-auto px-4 md:px-8 relative z-10">
+            <div class="text-center max-w-4xl mx-auto mb-16">
+                <span class="text-brand-400 font-bold tracking-wider uppercase text-sm border border-brand-500/30 bg-brand-500/10 px-4 py-1.5 rounded-full inline-block mb-4">Fitur Premium</span>
+                <h2 class="text-3xl md:text-5xl font-extrabold mb-6 leading-tight">Solusi Digital Khusus Agen <br/><span class="text-brand-400">Trekking Gunung Rinjani</span></h2>
+                <p class="text-slate-300 text-lg leading-relaxed">
+                    Website Anda tidak akan sekadar menjadi brosur online, melainkan <b>Mesin Penjualan Otomatis</b> yang bekerja 24 jam melayani calon pendaki dari seluruh dunia.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                <div class="bg-slate-800/80 backdrop-blur p-6 rounded-2xl border border-slate-700 hover:border-brand-500 transition-colors">
+                    <svg class="w-10 h-10 text-brand-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                    <h3 class="text-lg font-bold mb-2">Sistem Booking Kalender</h3>
+                    <p class="text-sm text-slate-400">Turis bisa langsung pilih tanggal pendakian, cek ketersediaan kuota, dan harga otomatis terhitung.</p>
+                </div>
+                <div class="bg-slate-800/80 backdrop-blur p-6 rounded-2xl border border-slate-700 hover:border-brand-500 transition-colors">
+                    <svg class="w-10 h-10 text-brand-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path></svg>
+                    <h3 class="text-lg font-bold mb-2">Katalog Paket Trekking</h3>
+                    <p class="text-sm text-slate-400">Tampilan detail paket 2D1N, 3D2N, Summit, Lake, lengkap dengan itinerary harian & list perlengkapan.</p>
+                </div>
+                <div class="bg-slate-800/80 backdrop-blur p-6 rounded-2xl border border-slate-700 hover:border-brand-500 transition-colors">
+                    <svg class="w-10 h-10 text-brand-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path></svg>
+                    <h3 class="text-lg font-bold mb-2">Multi Bahasa (EN/ID)</h3>
+                    <p class="text-sm text-slate-400">Siap melayani pasar lokal maupun Bule. Struktur bahasa Inggris yang profesional dan SEO Friendly.</p>
+                </div>
+                <div class="bg-slate-800/80 backdrop-blur p-6 rounded-2xl border border-slate-700 hover:border-brand-500 transition-colors">
+                    <svg class="w-10 h-10 text-brand-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 10a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1v-4z"></path></svg>
+                    <h3 class="text-lg font-bold mb-2">Integrasi WhatsApp</h3>
+                    <p class="text-sm text-slate-400">Data booking otomatis terkirim rapi ke WhatsApp Anda. Tidak perlu pusing mencatat manual lagi.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 🌐 LAYANAN DIGITAL LAINNYA & PREVIEW -->
+    <section id="layanan-lain" class="py-24 bg-white border-y border-slate-200">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-extrabold text-slate-900 mb-4">Kami Juga Mengerjakan</h2>
+                <p class="text-slate-500">Selain spesialisasi di bidang Trekking Pariwisata, tim developer kami juga ahli membuat berbagai sistem digital untuk menunjang bisnis di Lombok.</p>
+            </div>
+
+            <!-- Grid Layanan Lain (Sekarang buka Modal Detail) -->
+            <div id="services-grid" class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-5xl mx-auto">
+                
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-brand-300 hover:shadow-md transition-all text-center cursor-pointer group" onclick="openServiceModal(21)">
+                    <svg class="w-10 h-10 text-blue-600 mx-auto mb-3 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg>
+                    <h4 class="font-bold text-slate-800 text-sm">Web Transportasi</h4>
+                    <p class="text-xs text-slate-500 mt-1">Travel & Antar Jemput</p>
+                </div>
+
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-brand-300 hover:shadow-md transition-all text-center cursor-pointer group" onclick="openServiceModal(22)">
+                    <svg class="w-10 h-10 text-orange-500 mx-auto mb-3 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
+                    <h4 class="font-bold text-slate-800 text-sm">Sewa Mobil/Motor</h4>
+                    <p class="text-xs text-slate-500 mt-1">Rental Kendaraan</p>
+                </div>
+
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-brand-300 hover:shadow-md transition-all text-center cursor-pointer group" onclick="openServiceModal(5)">
+                    <svg class="w-10 h-10 text-pink-500 mx-auto mb-3 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+                    <h4 class="font-bold text-slate-800 text-sm">Toko Online</h4>
+                    <p class="text-xs text-slate-500 mt-1">E-Commerce UMKM</p>
+                </div>
+
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-brand-300 hover:shadow-md transition-all text-center cursor-pointer group" onclick="openServiceModal(7)">
+                    <svg class="w-10 h-10 text-emerald-600 mx-auto mb-3 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                    <h4 class="font-bold text-slate-800 text-sm">Profil Desa</h4>
+                    <p class="text-xs text-slate-500 mt-1">Layanan Administrasi</p>
+                </div>
+
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-brand-300 hover:shadow-md transition-all text-center cursor-pointer group" onclick="openServiceModal(1)">
+                    <svg class="w-10 h-10 text-slate-600 mx-auto mb-3 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    <h4 class="font-bold text-slate-800 text-sm">Company Profile</h4>
+                    <p class="text-xs text-slate-500 mt-1">PT / CV Perusahaan</p>
+                </div>
+
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-brand-300 hover:shadow-md transition-all text-center cursor-pointer group" onclick="openServiceModal(6)">
+                    <svg class="w-10 h-10 text-indigo-600 mx-auto mb-3 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path></svg>
+                    <h4 class="font-bold text-slate-800 text-sm">Web Sekolah</h4>
+                    <p class="text-xs text-slate-500 mt-1">PPDB & Info Akademik</p>
+                </div>
+
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-brand-300 hover:shadow-md transition-all text-center cursor-pointer group" onclick="openServiceModal(11)">
+                    <svg class="w-10 h-10 text-lime-600 mx-auto mb-3 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                    <h4 class="font-bold text-slate-800 text-sm">Aplikasi Kasir</h4>
+                    <p class="text-xs text-slate-500 mt-1">Android POS Desktop</p>
+                </div>
+
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-brand-300 hover:shadow-md transition-all text-center cursor-pointer group" onclick="openServiceModal(10)">
+                    <svg class="w-10 h-10 text-cyan-600 mx-auto mb-3 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                    <h4 class="font-bold text-slate-800 text-sm">Custom System</h4>
+                    <p class="text-xs text-slate-500 mt-1">Sistem HRD / CRM / DLL</p>
+                </div>
+            </div>
+            <p class="text-center mt-6 text-sm text-slate-400 italic">*Klik pada menu di atas untuk melihat <b>Harga & Fitur Detail</b>.</p>
+        </div>
+    </section>
+
+    <!-- 💰 SECTION PAKET KHUSUS RINJANI & AUTOMATED ORDER -->
+    <section id="paket" class="py-24 bg-slate-50">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">Pesan Website Sekarang</h2>
+                <p class="text-slate-600 text-lg">Pilih paket yang paling sesuai dengan kebutuhan agen Anda. Klik tombol pesan untuk melakukan pemesanan otomatis.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto items-center">
+                <!-- Paket 1 -->
+                <div class="bg-white border border-slate-200 rounded-3xl p-8 shadow-sm hover:shadow-xl transition-shadow relative overflow-hidden">
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Rinjani Starter</h3>
+                    <p class="text-slate-500 text-sm mb-6">Cocok untuk pemula.</p>
+                    <div class="text-3xl font-extrabold text-slate-900 mb-6">Rp 1.5 Jt</div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex gap-3 text-slate-700 text-sm"><svg class="w-5 h-5 text-brand-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> <b>Tampilan Super Ringan</b></li>
+                        <li class="flex gap-3 text-slate-700 text-sm"><svg class="w-5 h-5 text-brand-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Desain Halaman Paket & Harga</li>
+                        <li class="flex gap-3 text-slate-700 text-sm"><svg class="w-5 h-5 text-brand-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Tombol Chat to WhatsApp</li>
+                        <li class="flex gap-3 text-slate-700 text-sm"><svg class="w-5 h-5 text-brand-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Domain & Hosting 1 Tahun</li>
+                    </ul>
+                    <button onclick="openOrderModal('Rinjani Starter', 1500000)" class="w-full text-center py-3 rounded-xl border-2 border-brand-500 text-brand-600 font-bold hover:bg-brand-50 transition-colors">Pesan Starter</button>
+                </div>
+
+                <!-- Paket 2 (Highlight) -->
+                <div class="bg-slate-900 border-2 border-brand-500 rounded-3xl p-8 shadow-2xl transform md:-translate-y-4 relative">
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-brand-500 text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Paling Laris</div>
+                    <h3 class="text-xl font-bold text-white mb-2">Rinjani Professional</h3>
+                    <p class="text-slate-400 text-sm mb-6">Sistem agen profesional.</p>
+                    <div class="text-3xl font-extrabold text-white mb-6">Rp 2.5 Jt</div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex gap-3 text-slate-300 text-sm"><svg class="w-5 h-5 text-brand-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Semua Fitur Starter +</li>
+                        <li class="flex gap-3 text-white text-sm font-semibold"><svg class="w-5 h-5 text-brand-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> <b>Sistem Booking Otomatis</b></li>
+                        <li class="flex gap-3 text-white text-sm font-semibold"><svg class="w-5 h-5 text-brand-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Dashboard Admin Web</li>
+                        <li class="flex gap-3 text-slate-300 text-sm"><svg class="w-5 h-5 text-brand-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Basic SEO Setup (Google)</li>
+                    </ul>
+                    <button onclick="openOrderModal('Rinjani Professional', 2500000)" class="w-full text-center py-4 rounded-xl bg-brand-500 text-white font-bold hover:bg-brand-600 transition-colors shadow-lg shadow-brand-500/30">Pesan Professional</button>
+                </div>
+
+                <!-- Paket 3 -->
+                <div class="bg-white border border-slate-200 rounded-3xl p-8 shadow-sm hover:shadow-xl transition-shadow relative overflow-hidden">
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Rinjani Ultimate</h3>
+                    <p class="text-slate-500 text-sm mb-6">Fitur terlengkap & tercanggih.</p>
+                    <div class="text-3xl font-extrabold text-slate-900 mb-6">Rp 4.0 Jt</div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex gap-3 text-slate-700 text-sm"><svg class="w-5 h-5 text-brand-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Semua Fitur Professional +</li>
+                        <li class="flex gap-3 text-slate-900 font-medium text-sm"><svg class="w-5 h-5 text-brand-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> <b>Payment Gateway Otomatis</b></li>
+                        <li class="flex gap-3 text-slate-900 font-medium text-sm"><svg class="w-5 h-5 text-brand-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Multi Currency (USD/IDR)</li>
+                        <li class="flex gap-3 text-slate-700 text-sm"><svg class="w-5 h-5 text-brand-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Advanced SEO Strategy</li>
+                    </ul>
+                    <button onclick="openOrderModal('Rinjani Ultimate', 4000000)" class="w-full text-center py-3 rounded-xl border-2 border-brand-500 text-brand-600 font-bold hover:bg-brand-50 transition-colors">Pesan Ultimate</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="pt-12 pb-8 bg-slate-950 text-slate-400 border-t border-slate-800">
+        <div class="container mx-auto px-4 md:px-8 text-center">
+            <div class="flex items-center justify-center gap-3 mb-6">
+                <img src="images/lombokpartnerdigital.png" alt="Logo" class="w-8 h-8 object-contain filter grayscale opacity-70">
+                <span class="font-bold text-lg text-white lowercase">semeton<span class="text-brand-500">web</span></span>
+            </div>
+            <p class="mb-4">Spesialis Website Agen Trekking Gunung Rinjani & Solusi Bisnis Digital Lombok.</p>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-6 text-sm mb-8">
+                <span>Email: ahmadstimik15@gmail.com</span>
+                <span class="hidden md:block w-1 h-1 rounded-full bg-slate-600"></span>
+                <span>WA: 0859-5668-4081</span>
+            </div>
+            <p class="text-xs">&copy; <script>document.write(new Date().getFullYear())</script> semetonweb. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- SERVICE DETAIL MODAL (Pop-up with Price & Demo) -->
+    <div id="service-modal" class="fixed inset-0 z-[100] hidden transition-opacity duration-300 opacity-0 pointer-events-none">
+        <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-md" onclick="closeServiceModal()"></div>
+        <div class="absolute inset-0 flex items-center justify-center p-0 md:p-4">
+            <div class="bg-white w-full h-full md:h-[90vh] md:w-[95vw] md:max-w-6xl md:rounded-[2rem] overflow-hidden flex flex-col shadow-2xl transform transition-transform duration-300 scale-95" id="modal-panel">
+                
+                <!-- Header -->
+                <div class="flex items-center justify-between p-4 md:p-6 border-b border-slate-100">
+                    <div>
+                        <h3 id="m-title" class="text-xl md:text-2xl font-extrabold text-slate-900">Service Title</h3>
+                    </div>
+                    <button onclick="closeServiceModal()" class="p-2 bg-slate-100 hover:bg-slate-200 rounded-full transition-colors">
+                        <svg class="w-6 h-6 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                    </button>
+                </div>
+
+                <!-- Body -->
+                <div class="flex-1 overflow-y-auto flex flex-col lg:flex-row bg-slate-50">
+                    <!-- Left: Info & Pricing -->
+                    <div class="w-full lg:w-1/2 p-6 md:p-8 bg-white flex flex-col border-r border-slate-200">
+                        
+                        <!-- Price Tag Area -->
+                        <div class="bg-brand-50 border border-brand-200 rounded-2xl p-5 mb-6 flex flex-row items-center justify-between shadow-sm">
+                            <div>
+                                <p class="text-xs text-brand-700 font-bold uppercase tracking-wider mb-1">Harga Mulai</p>
+                                <p id="m-price" class="text-3xl font-extrabold text-slate-900">Rp 0</p>
+                            </div>
+                            <div class="text-right hidden sm:block">
+                                <span class="text-xs text-brand-700 font-medium block">Termasuk Server</span>
+                                <span class="text-xs text-brand-700 font-medium block">& Domain 1 Tahun</span>
+                            </div>
+                        </div>
+
+                        <p id="m-desc" class="text-slate-600 text-[15px] leading-relaxed mb-6 border-b border-slate-100 pb-6">Description...</p>
+                        
+                        <h4 class="font-bold text-slate-900 mb-4 flex items-center gap-2">
+                            <svg class="w-5 h-5 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                            Yang Anda Dapatkan:
+                        </h4>
+                        <ul id="m-features" class="space-y-3 mb-8 pl-1"></ul>
+                    </div>
+
+                    <!-- Right: Preview Image -->
+                    <div class="w-full lg:w-1/2 p-6 md:p-8 flex flex-col items-center justify-center relative">
+                        <div class="flex gap-2 mb-4 bg-white p-1.5 rounded-lg border border-slate-200 shadow-sm z-10">
+                            <button onclick="setDevice('laptop')" class="p-2 rounded hover:bg-slate-100 text-slate-500 focus:text-brand-600 transition-colors" title="Desktop"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></button>
+                            <button onclick="setDevice('mobile')" class="p-2 rounded hover:bg-slate-100 text-slate-500 focus:text-brand-600 transition-colors" title="Mobile"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></button>
+                        </div>
+
+                        <!-- Frames -->
+                        <div id="ui-frame-laptop" class="mockup-laptop w-full max-w-[450px] aspect-[16/10] bg-slate-200">
+                            <img id="m-preview-img-laptop" src="" class="w-full h-full object-cover object-top" alt="Preview">
+                        </div>
+                        <div id="ui-frame-mobile" class="hidden w-[160px] h-[320px] border-[6px] border-slate-800 rounded-3xl bg-slate-200 overflow-hidden relative shadow-xl">
+                            <div class="absolute top-0 inset-x-0 h-3 bg-slate-800 w-1/2 mx-auto rounded-b-md z-10"></div>
+                            <img id="m-preview-img-mobile" src="" class="w-full h-full object-cover object-top" alt="Preview Mobile">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer -->
+                <div class="p-4 md:p-6 border-t border-slate-100 bg-white flex justify-end gap-3 flex-col sm:flex-row">
+                    <!-- Tombol Demo di Modal -->
+                    <a id="btn-modal-demo" href="#" target="_blank" class="hidden w-full sm:w-auto py-3 px-6 rounded-xl border border-blue-500 text-blue-600 font-bold hover:bg-blue-50 text-center items-center justify-center gap-2 transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                        <span id="demo-text">Lihat Demo Web</span>
+                    </a>
+                    <!-- Tombol Pesan -->
+                    <button onclick="handleModalOrder()" class="w-full sm:w-auto py-3 px-8 rounded-xl bg-brand-600 text-white font-bold hover:bg-brand-500 text-center transition-colors shadow-lg shadow-brand-500/20">
+                        Pesan Sistem Ini
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 🛒 AUTOMATED ORDER MODAL (POP-UP PEMESANAN OTOMATIS) -->
+    <div id="order-modal" class="fixed inset-0 z-[110] hidden transition-opacity duration-300 opacity-0 pointer-events-none">
+        <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm" onclick="closeOrderModal()"></div>
+        <div class="absolute inset-0 flex items-center justify-center p-4">
+            <div class="bg-white w-full max-w-lg rounded-3xl shadow-2xl overflow-hidden transform scale-95 transition-transform duration-300" id="order-panel">
+                <div class="bg-slate-900 p-6 text-white relative">
+                    <button onclick="closeOrderModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                    </button>
+                    <h3 class="text-2xl font-bold">Form Pemesanan</h3>
+                </div>
+                <div class="p-6 md:p-8 bg-slate-50">
+                    <form id="auto-order-form" class="space-y-5">
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-1">Nama Pemesan / Bisnis</label>
+                            <input type="text" id="order-name" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-brand-500 focus:ring-2 focus:ring-brand-200 outline-none transition-all">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-1">Jenis Layanan</label>
+                            <select id="order-type" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-brand-500 focus:ring-2 focus:ring-brand-200 outline-none transition-all appearance-none bg-white">
+                                <option value="Web Trekking Rinjani">Web Trekking Rinjani</option>
+                                <option value="Web Transportasi & Travel">Web Transportasi & Travel</option>
+                                <option value="Web Sewa Kendaraan">Web Sewa Kendaraan</option>
+                                <option value="Toko Online">Toko Online / E-Commerce</option>
+                                <option value="Website Profil Perusahaan (PT/CV)">Website Profil Perusahaan</option>
+                                <option value="Sistem Reservasi / Booking">Sistem Reservasi</option>
+                                <option value="Portal Desa Digital">Portal Desa Digital</option>
+                                <option value="Website Portal Berita">Website Portal Berita</option>
+                                <option value="Website Sekolah / Kampus">Website Sekolah</option>
+                                <option value="Aplikasi Android: Kasir POS">Aplikasi Android Kasir</option>
+                                <option value="Sistem Custom (CRM/ERP)">Sistem Custom</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-1">Pilihan Paket/Estimasi</label>
+                            <div class="grid grid-cols-3 gap-2">
+                                <label class="cursor-pointer">
+                                    <input type="radio" name="package" value="1500000" class="peer sr-only" onchange="calculatePrice()">
+                                    <div class="text-center p-2 rounded-xl border border-slate-300 peer-checked:bg-brand-50 peer-checked:border-brand-500 peer-checked:text-brand-700 transition-all">
+                                        <div class="text-xs font-bold mb-1">Starter</div>
+                                        <div class="text-[10px] text-slate-500">Minimal</div>
+                                    </div>
+                                </label>
+                                <label class="cursor-pointer">
+                                    <input type="radio" name="package" value="2500000" class="peer sr-only" checked onchange="calculatePrice()">
+                                    <div class="text-center p-2 rounded-xl border border-slate-300 peer-checked:bg-brand-50 peer-checked:border-brand-500 peer-checked:text-brand-700 transition-all">
+                                        <div class="text-xs font-bold mb-1">Pro</div>
+                                        <div class="text-[10px] text-slate-500">Standar</div>
+                                    </div>
+                                </label>
+                                <label class="cursor-pointer">
+                                    <input type="radio" name="package" value="4000000" class="peer sr-only" onchange="calculatePrice()">
+                                    <div class="text-center p-2 rounded-xl border border-slate-300 peer-checked:bg-brand-50 peer-checked:border-brand-500 peer-checked:text-brand-700 transition-all">
+                                        <div class="text-xs font-bold mb-1">Ultimate</div>
+                                        <div class="text-[10px] text-slate-500">Lengkap</div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="bg-slate-900 rounded-xl p-4 mt-6 border-l-4 border-brand-500 flex justify-between items-center">
+                            <div>
+                                <p class="text-xs text-slate-400 font-bold uppercase tracking-wider">Estimasi Harga</p>
+                                <p class="text-2xl font-extrabold text-white" id="price-display">Rp 2.500.000</p>
+                            </div>
+                        </div>
+                        <button type="button" onclick="submitOrder()" class="w-full py-4 rounded-xl bg-brand-600 text-white font-bold hover:bg-brand-500 transition-colors shadow-lg shadow-brand-500/30 flex items-center justify-center gap-2 mt-4">
+                            Kirim ke WhatsApp
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // FUNGSI FORMAT RUPIAH
+        function formatRupiah(angka) {
+            return new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', minimumFractionDigits: 0 }).format(angka);
+        }
+
+        // DATA LAYANAN LAINNYA LENGKAP DENGAN HARGA LOMBOK
+        const servicesData = [
+            { id: 21, title: "Web Transportasi & Travel", 
+              icon: `<svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg>`,
+              desc: "Website penyedia jasa transportasi rute wisata, antar jemput bandara, atau travel antar kota di Lombok.",
+              features: ["Daftar Rute & Harga Transparan", "Katalog Armada Kendaraan Lengkap", "Form Pesan Terhubung WhatsApp", "Integrasi Maps Titik Jemput", "Domain & Hosting 1 Tahun", "Optimasi Tampilan HP (Mobile)"],
+              imgDesktop: "images/slide/BGDESKTOP-GRAB.JPG", imgMobile: "images/slide/BGMOBILE-GRAB.JPG",
+              demoUrl: "https://ahmadci4.github.io/lombokgrab/", demoDisplay: "Demo Web Transport", basePrice: 2500000 }, 
+            
+            { id: 22, title: "Sewa Mobil & Motor", 
+              icon: `<svg class="w-8 h-8 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>`,
+              desc: "Website rental kendaraan (mobil/motor) untuk bule dan wisatawan lokal dengan fitur display garasi yang keren.",
+              features: ["Katalog Kendaraan dengan Foto HD", "Harga Sewa Harian & Bulanan", "Sistem Booking dengan Kalender", "Syarat & Ketentuan Sewa Rapi", "Dukungan Multi Bahasa (EN/ID)", "Gratis Domain .com 1 Tahun"],
+              imgDesktop: "images/slide/BGDESKTOP-GRAB.JPG", imgMobile: "images/slide/BGMOBILE-GRAB.JPG",
+              demoUrl: "https://ahmadci4.github.io/demo-web-sewa-mobil/", demoDisplay: "Demo Web Rental", basePrice: 2500000 },
+            
+            { id: 5, title: "Toko Online / UMKM", 
+              icon: `<svg class="w-8 h-8 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>`,
+              desc: "Jualan online 24 jam dengan website sendiri. Terlihat sangat profesional tanpa potongan komisi marketplace.",
+              features: ["Upload Katalog Produk Tak Terbatas", "Sistem Keranjang Belanja (Cart)", "Hitung Ongkir Otomatis (RajaOngkir)", "Halaman Detail Produk & Ulasan", "Dashboard Laporan Penjualan", "Opsi Payment Gateway (Transfer Otomatis)"],
+              imgDesktop: "images/slide/toko-online-desktop.JPG", imgMobile: "images/slide/toko-online-mobile.JPG",
+              demoUrl: "https://ahmadci4.github.io/demo-web-toko-online/", demoDisplay: "Demo Toko Baju", basePrice: 2500000 },
+            
+            { id: 7, title: "Portal Desa Digital", 
+              icon: `<svg class="w-8 h-8 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>`,
+              desc: "Sistem informasi pemerintahan desa untuk transparansi anggaran dan pelayanan surat menyurat online bagi warga.",
+              features: ["Publikasi Berita & Kegiatan Desa", "Grafik Transparansi Dana (APBDes)", "Sistem Permohonan Surat Online", "Database Kependudukan Dasar", "Katalog UMKM & Potensi Desa", "Bantuan Registrasi Domain .desa.id"],
+              imgDesktop: "images/local-administration-dashboard.png", imgMobile: "images/local-administration-dashboard.png",
+              demoUrl: "https://ahmadci4.github.io/demo-web-profil-desa/", demoDisplay: "Demo Web Desa", basePrice: 3500000 },
+
+            { id: 1, title: "Company Profile (PT/CV)", 
+              icon: `<svg class="w-8 h-8 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>`,
+              desc: "Website elegan untuk membangun citra perusahaan yang kredibel. Syarat penting untuk ikut tender proyek.",
+              features: ["Desain Custom Mewah & Elegan", "Halaman Visi, Misi & Struktur Organisasi", "Galeri Portofolio Proyek Klien", "Formulir Kontak Terhubung Email", "Integrasi Peta Lokasi Kantor", "Gratis Domain .com atau .co.id 1 Tahun"],
+              imgDesktop: "images/companyprofile.png", imgMobile: "images/companyprofile.png",
+              demoUrl: "https://ahmadci4.github.io/demo-web-company-profile/", demoDisplay: "Demo Web PT", basePrice: 1500000 },
+
+            { id: 6, title: "Sistem Web Sekolah", 
+              icon: `<svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path></svg>`,
+              desc: "Website resmi instansi sekolah untuk memudahkan informasi siswa baru dan wali murid secara digital.",
+              features: ["Profil Sekolah & Direktori Guru", "Sistem Pendaftaran Online (PPDB)", "Papan Pengumuman & Berita Sekolah", "Area Download Dokumen Siswa", "Galeri Prestasi Akademik", "Bantuan Pendaftaran Domain .sch.id"],
+              imgDesktop: "images/administration.png", imgMobile: "images/administration.png",
+              demoUrl: "https://ahmadci4.github.io/demo-web-sekolah/", demoDisplay: "Demo Web Sekolah", basePrice: 3000000 },
+            
+            { id: 11, title: "Aplikasi Kasir Android", 
+              icon: `<svg class="w-8 h-8 text-lime-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>`,
+              desc: "Ubah tablet atau HP biasa menjadi mesin kasir canggih. Cocok untuk warung kopi, cafe, dan toko retail.",
+              features: ["Fitur Scan Barcode Lewat Kamera", "Cetak Struk Langsung ke Printer Bluetooth", "Laporan Pemasukan Harian Otomatis", "Manajemen Peringatan Stok Habis", "Sistem Login Shift Kasir", "Bisa Berjalan Offline Tanpa Internet"],
+              imgDesktop: "images/aplikasikasir.png", imgMobile: "images/aplikasikasir.png",
+              demoUrl: "", basePrice: 3500000 },
+            
+            { id: 10, title: "Custom Web System", 
+              icon: `<svg class="w-8 h-8 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>`,
+              desc: "Pembuatan sistem administrasi khusus (Tailor-made) yang disesuaikan 100% dengan alur kerja perusahaan Anda.",
+              features: ["Analisa Kebutuhan & Flowchart SOP", "Sistem Login Multi Role Terbatas", "Manajemen Basis Data Relasional", "Fitur Cetak Laporan (PDF/Excel)", "Log Aktivitas User Keamanan", "Garansi Perbaikan Bug"],
+              imgDesktop: "images/developer.png", imgMobile: "images/developer.png",
+              demoUrl: "", basePrice: 5000000 }
+        ];
+
+        // Render Grid
+        const gridContainer = document.getElementById('services-grid');
+        servicesData.forEach(s => {
+            const el = `
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 hover:border-brand-300 transition-colors text-center cursor-pointer shadow-sm hover:shadow-lg hover:-translate-y-1" onclick="openServiceModal(${s.id})">
+                    <div class="mb-3">${s.icon}</div>
+                    <h4 class="font-bold text-slate-800 text-sm leading-tight">${s.title}</h4>
+                </div>
+            `;
+            gridContainer.insertAdjacentHTML('beforeend', el);
+        });
+
+        // MODAL LOGIC
+        const serviceModal = document.getElementById('service-modal');
+        const servicePanel = document.getElementById('modal-panel');
+        let currentSrvData = null;
+
+        function openServiceModal(id) {
+            currentSrvData = servicesData.find(s => s.id === id);
+            if(!currentSrvData) return;
+
+            // Isi Data Teks
+            document.getElementById('m-title').innerText = currentSrvData.title;
+            document.getElementById('m-desc').innerText = currentSrvData.desc;
+            
+            // Isi Harga dengan Format Rupiah
+            document.getElementById('m-price').innerText = formatRupiah(currentSrvData.basePrice);
+            
+            // Isi Fitur
+            const flist = document.getElementById('m-features');
+            flist.innerHTML = currentSrvData.features.map(f => `
+                <li class="flex items-start gap-2 text-[15px] text-slate-700 font-medium">
+                    <svg class="w-5 h-5 text-brand-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                    ${f}
+                </li>
+            `).join('');
+
+            // Logika Tombol Demo
+            const btnDemo = document.getElementById('btn-modal-demo');
+            if(currentSrvData.demoUrl && currentSrvData.demoUrl !== "") {
+                btnDemo.href = currentSrvData.demoUrl;
+                document.getElementById('demo-text').innerText = currentSrvData.demoDisplay || "Lihat Demo";
+                btnDemo.classList.remove('hidden');
+                btnDemo.classList.add('flex');
+            } else {
+                btnDemo.classList.add('hidden');
+                btnDemo.classList.remove('flex');
+            }
+
+            // Atur Gambar
+            document.getElementById('m-preview-img-laptop').src = currentSrvData.imgDesktop;
+            document.getElementById('m-preview-img-mobile').src = currentSrvData.imgMobile;
+            
+            setDevice('laptop'); // Default view
+            
+            // Buka Modal
+            serviceModal.classList.remove('hidden');
+            setTimeout(() => {
+                serviceModal.classList.remove('opacity-0', 'pointer-events-none');
+                servicePanel.classList.remove('scale-95');
+                servicePanel.classList.add('scale-100');
+            }, 50);
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeServiceModal() {
+            serviceModal.classList.add('opacity-0', 'pointer-events-none');
+            servicePanel.classList.remove('scale-100');
+            servicePanel.classList.add('scale-95');
+            setTimeout(() => { serviceModal.classList.add('hidden'); }, 300);
+            document.body.style.overflow = 'auto';
+        }
+
+        function handleModalOrder() {
+            closeServiceModal();
+            setTimeout(() => {
+                openOrderModal(currentSrvData.title, currentSrvData.basePrice);
+            }, 300);
+        }
+
+        function setDevice(device) {
+            const lap = document.getElementById('ui-frame-laptop');
+            const mob = document.getElementById('ui-frame-mobile');
+            if (device === 'laptop') { lap.classList.remove('hidden'); mob.classList.add('hidden'); } 
+            else { lap.classList.add('hidden'); mob.classList.remove('hidden'); }
+        }
+
+        // Navbar Scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 10) { nav.classList.add('shadow-sm', 'bg-white/95'); nav.classList.remove('bg-white/90'); } 
+            else { nav.classList.remove('shadow-sm', 'bg-white/95'); nav.classList.add('bg-white/90'); }
+        });
+
+        document.getElementById('menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // ORDER MODAL LOGIC
+        const orderModal = document.getElementById('order-modal');
+        const orderPanel = document.getElementById('order-panel');
+        const priceDisplay = document.getElementById('price-display');
+
+        function openOrderModal(serviceName, basePrice = 2500000) {
+            const typeSelect = document.getElementById('order-type');
+            for(let i=0; i<typeSelect.options.length; i++) {
+                if(typeSelect.options[i].value.includes(serviceName) || serviceName.includes(typeSelect.options[i].value)) {
+                    typeSelect.selectedIndex = i; break;
+                }
+            }
+
+            let radios = document.getElementsByName('package');
+            if(serviceName.includes('Starter') || basePrice === 1500000) { radios[0].checked = true; }
+            else if(serviceName.includes('Ultimate') || basePrice >= 3500000) { radios[2].checked = true; }
+            else { radios[1].checked = true; }
+
+            calculatePrice();
+            
+            orderModal.classList.remove('hidden');
+            setTimeout(() => {
+                orderModal.classList.remove('opacity-0', 'pointer-events-none');
+                orderPanel.classList.remove('scale-95');
+                orderPanel.classList.add('scale-100');
+            }, 50);
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeOrderModal() {
+            orderModal.classList.add('opacity-0', 'pointer-events-none');
+            orderPanel.classList.remove('scale-100');
+            orderPanel.classList.add('scale-95');
+            setTimeout(() => { orderModal.classList.add('hidden'); }, 300);
+            document.body.style.overflow = 'auto';
+        }
+
+        function calculatePrice() {
+            const radios = document.getElementsByName('package');
+            let selectedPrice = 0;
+            for(let i=0; i<radios.length; i++){
+                if(radios[i].checked){ selectedPrice = parseInt(radios[i].value); break; }
+            }
+            priceDisplay.innerText = formatRupiah(selectedPrice);
+        }
+
+        function submitOrder() {
+            const name = document.getElementById('order-name').value;
+            if(!name) { alert("Mohon isi Nama Agen / Perusahaan Anda."); return; }
+            const type = document.getElementById('order-type').value;
+            const price = priceDisplay.innerText;
+            
+            let pkgName = "Paket Pro/Standar";
+            if(price.includes("1.500.000")) pkgName = "Paket Starter/Minimal";
+            if(price.includes("4.000.000")) pkgName = "Paket Ultimate/Lengkap";
+
+            const text = `Halo semetonweb!%0A%0ASaya ingin konsultasi / pesan Website:%0A%0A*Nama:* ${name}%0A*Layanan:* ${type}%0A*Kebutuhan:* ${pkgName}%0A*Estimasi Anggaran:* ${price}%0A%0AMohon info selanjutnya. Terima kasih!`;
+            window.open(`https://wa.me/6285956684081?text=${text}`, '_blank');
+            closeOrderModal();
+        }
+    </script>
+</body>
+</html>
